@@ -1,13 +1,13 @@
-# UWP-PercentageRing-Control
-A lightweight UWP XAML circular control to represent or select a value between 0 and 100.
+# UWP-RadialRangeIndicator-Control
+A lightweight UWP XAML circular control to represent a range.
 
 ## Nuget Package
-You can download the latest nuget package for PercentageRing using this command:
+In the near future you will be able to download the latest nuget package for RadialRangeIndicator using this command:
 
-`PM>  Install-Package XamlBrewer.Uwp.PercentageRing`
+`PM>  Install-Package XamlBrewer.Uwp.RadialRangeIndicator`
 
 ## Screenshots from sample app
 
-![Default Control](Assets/PercentageRing.png?raw=true "Default Control")
+![Default Control](Assets/RadialRangeIndicator.png?raw=true "Default Control")
  
 ![Advanced Usage](Assets/Gallery.png?raw=true "Advanced Usage")
