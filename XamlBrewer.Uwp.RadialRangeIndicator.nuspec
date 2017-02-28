@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>XamlBrewer.Uwp.RadialRangeIndicator</id>
+    <version>1.0.0.0</version>
+    <title>RadialRangeIndicator Control for UWP</title>
+    <authors>Diederik Krols</authors>
+    <owners>xamlbrewer</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/XamlBrewer/UWP-RadialRangeIndicator-Control</projectUrl>
+    <iconUrl>https://github.com/XamlBrewer/UWP-RadialRangeIndicator-Control/blob/master/nuget.png?raw=true</iconUrl>
+    <description>A lightweight UWP XAML circular control to represent a range.</description>
+    <copyright>© XAMLBrewer. All rights reserved.</copyright>
+    <tags>UWP Controls XAML Radial Range</tags>
+    <dependencies>
+      <group targetFramework="uap10.0">
+        <dependency id="System.Runtime.InteropServices.WindowsRuntime" version="4.0.0" />
+        <dependency id="System.Collections" version="4.0.10" />
+        <dependency id="System.Diagnostics.Debug" version="4.0.10" />
+        <dependency id="System.Diagnostics.Tools" version="4.0.0" />
+        <dependency id="System.Runtime" version="4.0.20" />
+        <dependency id="System.Runtime.Extensions" version="4.0.10" />
+        <dependency id="System.Runtime.WindowsRuntime" version="4.0.10" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src=".\XamlBrewer.Uwp.RadialRangeIndicator\bin\Release\XamlBrewer.Uwp.RadialRangeIndicator.dll" target="lib\uap10.0" />
+    <file src=".\XamlBrewer.Uwp.RadialRangeIndicator\bin\Release\XamlBrewer.Uwp.RadialRangeIndicator.pdb" target="lib\uap10.0" />
+    <file src=".\XamlBrewer.Uwp.RadialRangeIndicator\bin\Release\XamlBrewer.Uwp.RadialRangeIndicator.pri" target="lib\uap10.0" />
+    <file src=".\XamlBrewer.Uwp.RadialRangeIndicator\bin\Release\XamlBrewer.Uwp.RadialRangeIndicator.xr.xml" target="lib\uap10.0\XamlBrewer.Uwp.RadialRangeIndicator" />
+    <file src=".\XamlBrewer.Uwp.RadialRangeIndicator\Themes\Generic.xaml" target="lib\uap10.0\XAMLBrewer.RadialRangeIndicator.UWP\Themes" />
+    <file src=".\XamlBrewer.Uwp.RadialRangeIndicator\bin\Release\Themes\Generic.xbf" target="lib\uap10.0\XAMLBrewer.RadialRangeIndicator.UWP\Themes" />
+  </files>
+</package>

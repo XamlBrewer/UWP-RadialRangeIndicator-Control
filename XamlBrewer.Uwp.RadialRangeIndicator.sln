@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlBrewer.Uwp.RadialRangeIndicatorClient", "XamlBrewer.Uwp.RadialRangeIndicatorClient\XamlBrewer.Uwp.RadialRangeIndicatorClient.csproj", "{4A7C990A-5EE6-4B59-8636-585D184F2A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlBrewer.Uwp.RadialRangeIndicator", "XamlBrewer.Uwp.RadialRangeIndicator\XamlBrewer.Uwp.RadialRangeIndicator.csproj", "{D8DC83B4-801E-49E9-B806-17487B334E2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{863EA7DB-F598-4228-BC11-4ECD06633AB3}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.png = nuget.png
+		XamlBrewer.Uwp.RadialRangeIndicator.nuspec = XamlBrewer.Uwp.RadialRangeIndicator.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|Any CPU.Build.0 = Debug|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|ARM.ActiveCfg = Debug|ARM
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|ARM.Build.0 = Debug|ARM
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|ARM.Deploy.0 = Debug|ARM
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|x64.ActiveCfg = Debug|x64
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|x64.Build.0 = Debug|x64
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|x64.Deploy.0 = Debug|x64
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|x86.ActiveCfg = Debug|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|x86.Build.0 = Debug|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Debug|x86.Deploy.0 = Debug|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|Any CPU.ActiveCfg = Release|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|ARM.ActiveCfg = Release|ARM
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|ARM.Build.0 = Release|ARM
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|ARM.Deploy.0 = Release|ARM
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|x64.ActiveCfg = Release|x64
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|x64.Build.0 = Release|x64
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|x64.Deploy.0 = Release|x64
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|x86.ActiveCfg = Release|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|x86.Build.0 = Release|x86
+		{4A7C990A-5EE6-4B59-8636-585D184F2A21}.Release|x86.Deploy.0 = Release|x86
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Debug|ARM.Build.0 = Debug|ARM
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Debug|x64.ActiveCfg = Debug|x64
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Debug|x64.Build.0 = Debug|x64
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Debug|x86.ActiveCfg = Debug|x86
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Debug|x86.Build.0 = Debug|x86
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Release|ARM.ActiveCfg = Release|ARM
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Release|ARM.Build.0 = Release|ARM
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Release|x64.ActiveCfg = Release|x64
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Release|x64.Build.0 = Release|x64
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Release|x86.ActiveCfg = Release|x86
+		{D8DC83B4-801E-49E9-B806-17487B334E2F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

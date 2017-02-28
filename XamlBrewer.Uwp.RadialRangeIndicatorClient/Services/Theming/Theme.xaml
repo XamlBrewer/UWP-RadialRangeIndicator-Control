@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Theme Resources -->
+    <!-- http://www.colourlovers.com/palette/1422878 -->
+    
+    <!-- General Purpose -->
+    <SolidColorBrush x:Key="TenPercentDarkerBrush"
+                     Color="Black"
+                     Opacity=".1" />
+    <SolidColorBrush x:Key="TenPercentLighterBrush"
+                     Color="White"
+                     Opacity=".1" />
+    <SolidColorBrush x:Key="HighlightBrush"
+                     Color="OrangeRed" />
+
+    <!-- Header -->
+    <SolidColorBrush x:Key="TitlebarBackgroundBrush"
+                     Color="#B1560F" />
+    <SolidColorBrush x:Key="TitlebarBackgroundDarkBrush"
+                     Color="#004C28" />
+    <SolidColorBrush x:Key="TitlebarBackgroundLightBrush"
+                     Color="#AE973B" />
+    <SolidColorBrush x:Key="StatusbarBackgroundBrush"
+                     Color="#B1560F" />
+
+    <!-- Splitview Pane -->
+    <SolidColorBrush x:Key="SplitViewBackgroundBrush"
+                     Color="#7A6F41" />
+    <SolidColorBrush x:Key="SplitViewForegroundBrush"
+                     Color="Silver" />
+    <SolidColorBrush x:Key="HamburgerForegroundBrush"
+                     Color="Silver" />
+
+    <!-- Splitview Content -->
+    <SolidColorBrush x:Key="PageBackgroundBrush"
+                     Color="#617D66" />
+    <SolidColorBrush x:Key="PageForegroundBrush"
+                     Color="Silver" />
+
+</ResourceDictionary>

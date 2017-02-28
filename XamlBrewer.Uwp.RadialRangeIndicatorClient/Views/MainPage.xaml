@@ -1,0 +1,64 @@
+﻿<Page x:Class="XamlBrewer.Uwp.RadialRangeIndicatorClient.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:controls="using:XamlBrewer.Uwp.Controls"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      RequestedTheme="Dark">
+
+    <Grid Background="{StaticResource PageBackgroundBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <controls:RadialRangeIndicator MinRangeValue="{Binding ElementName=MinRangeValueSlider, Path=Value, Mode=TwoWay}"
+                                       MaxRangeValue="{Binding ElementName=MaxRangeValueSlider, Path=Value, Mode=TwoWay}"
+                                       MinAngle="{Binding ElementName=MinAngleSlider, Path=Value, Mode=TwoWay}"
+                                       MaxAngle="{Binding ElementName=MaxAngleSlider, Path=Value, Mode=TwoWay}"
+                                       ScaleWidth="{Binding ElementName=ScaleWidthSlider, Path=Value, Mode=TwoWay}"
+                                       ScaleBrush="Silver"
+                                       TextBrush="{StaticResource SplitViewForegroundBrush}"
+                                       Margin="40"
+                                       Grid.Column="0" />
+        <Grid Grid.Column="1"
+              VerticalAlignment="Center"
+              Margin="40 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Slider x:Name="MinRangeValueSlider"
+                    Header="Minimum Range Value"
+                    Value="40"
+                    Grid.Row="0" />
+            <Slider x:Name="MaxRangeValueSlider"
+                    Header="Maximum Range Value"
+                    Value="60"
+                    Grid.Row="1" />
+            <Slider x:Name="MinAngleSlider"
+                    Header="Minimum Angle"
+                    Minimum="-360"
+                    Maximum="360"
+                    Value="-130"
+                    Grid.Row="2" />
+            <Slider x:Name="MaxAngleSlider"
+                    Header="Maximum Angle"
+                    Minimum="-360"
+                    Maximum="360"
+                    Value="130"
+                    Grid.Row="3" />
+            <Slider x:Name="ScaleWidthSlider"
+                    Header="Scale Width"
+                    Value="25"
+                    Minimum="0"
+                    Maximum="100"
+                    Grid.Row="4" />
+        </Grid>
+    </Grid>
+</Page>
