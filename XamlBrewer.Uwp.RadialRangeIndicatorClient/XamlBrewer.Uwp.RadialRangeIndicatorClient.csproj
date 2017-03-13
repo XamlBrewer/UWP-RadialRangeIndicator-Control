@@ -172,12 +172,6 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\XamlBrewer.Uwp.RadialRangeIndicator\XamlBrewer.Uwp.RadialRangeIndicator.csproj">
-      <Project>{d8dc83b4-801e-49e9-b806-17487b334e2f}</Project>
-      <Name>XamlBrewer.Uwp.RadialRangeIndicator</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
