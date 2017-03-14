@@ -345,6 +345,8 @@ namespace XamlBrewer.Uwp.Controls
             {
                 if (radialRangeIndicator.StepSize > 0)
                 {
+                    // Round values to StepSize.
+                    radialRangeIndicator.MinRangeValue = radialRangeIndicator.RoundToMultiple(radialRangeIndicator.MinRangeValue, radialRangeIndicator.StepSize);
                     radialRangeIndicator.MaxRangeValue = radialRangeIndicator.RoundToMultiple(radialRangeIndicator.MaxRangeValue, radialRangeIndicator.StepSize);
                 }
 

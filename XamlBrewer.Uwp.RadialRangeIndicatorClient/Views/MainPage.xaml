@@ -20,6 +20,7 @@
                                        ScaleWidth="{Binding ElementName=ScaleWidthSlider, Path=Value, Mode=TwoWay}"
                                        ScaleBrush="Silver"
                                        TextBrush="{StaticResource SplitViewForegroundBrush}"
+                                       StepSize="1"
                                        Margin="40"
                                        Grid.Column="0" />
         <Grid Grid.Column="1"
@@ -35,11 +36,13 @@
 
             <Slider x:Name="MinRangeValueSlider"
                     Header="Minimum Range Value"
+                    StepFrequency=".33"
                     Value="40"
                     Grid.Row="0" />
             <Slider x:Name="MaxRangeValueSlider"
                     Header="Maximum Range Value"
                     Value="60"
+                    StepFrequency=".4"
                     Grid.Row="1" />
             <Slider x:Name="MinAngleSlider"
                     Header="Minimum Angle"
