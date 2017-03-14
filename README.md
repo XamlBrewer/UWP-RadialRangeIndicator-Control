@@ -2,7 +2,7 @@
 A lightweight UWP XAML circular control to represent a range.
 
 ## Nuget Package
-In the near future you will be able to download the latest nuget package for RadialRangeIndicator using this command:
+Download the latest nuget package for RadialRangeIndicator using this command:
 
 `PM>  Install-Package XamlBrewer.Uwp.RadialRangeIndicator`
 
