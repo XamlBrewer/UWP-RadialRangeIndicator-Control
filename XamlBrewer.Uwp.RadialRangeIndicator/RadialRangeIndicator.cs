@@ -19,35 +19,35 @@ namespace XamlBrewer.Uwp.Controls
     public class RadialRangeIndicator : Control
     {
         /// <summary>
-        /// Identifies the Minimum dependency property.
+        /// Identifies the ScaleMinimum dependency property.
         /// </summary>
-        public static readonly DependencyProperty MinimumProperty =
-            DependencyProperty.Register(nameof(Minimum), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(0.0, OnScaleChanged));
+        public static readonly DependencyProperty ScaleMinimumProperty =
+            DependencyProperty.Register(nameof(ScaleMinimum), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(0.0, OnScaleChanged));
 
         /// <summary>
-        /// Identifies the Maximum dependency property.
+        /// Identifies the ScaleMaximum dependency property.
         /// </summary>
-        public static readonly DependencyProperty MaximumProperty =
-            DependencyProperty.Register(nameof(Maximum), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(100.0, OnScaleChanged));
+        public static readonly DependencyProperty ScaleMaximumProperty =
+            DependencyProperty.Register(nameof(ScaleMaximum), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(100.0, OnScaleChanged));
 
         /// <summary>
-        /// Identifies the MinRangeValue dependency property.
+        /// Identifies the RangeMinimum dependency property.
         /// </summary>
-        public static readonly DependencyProperty MinRangeValueProperty =
-            DependencyProperty.Register(nameof(MinRangeValue), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(40.0, OnValueChanged));
+        public static readonly DependencyProperty RangeMinimumProperty =
+            DependencyProperty.Register(nameof(RangeMinimum), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(40.0, OnValueChanged));
 
         /// <summary>
-        /// Identifies the MaxRangeValue dependency property.
+        /// Identifies the RangeMaximum dependency property.
         /// </summary>
-        public static readonly DependencyProperty MaxRangeValueProperty =
-            DependencyProperty.Register(nameof(MaxRangeValue), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(60.0, OnValueChanged));
+        public static readonly DependencyProperty RangeMaximumProperty =
+            DependencyProperty.Register(nameof(RangeMaximum), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(60.0, OnValueChanged));
 
 
         /// <summary>
-        /// Identifies the optional StepSize property.
+        /// Identifies the optional RangeStepSize property.
         /// </summary>
-        public static readonly DependencyProperty StepSizeProperty =
-            DependencyProperty.Register(nameof(StepSize), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(0.0));
+        public static readonly DependencyProperty RangeStepSizeProperty =
+            DependencyProperty.Register(nameof(RangeStepSize), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(0.0));
 
         /// <summary>
         /// Identifies the ScaleWidth dependency property.
@@ -104,29 +104,28 @@ namespace XamlBrewer.Uwp.Controls
             DependencyProperty.Register(nameof(TextStringFormat), typeof(string), typeof(RadialRangeIndicator), new PropertyMetadata("{0} - {1}"));
 
         /// <summary>
-        /// Identifies the MinAngle dependency property.
+        /// Identifies the ScaleMinimumAngle dependency property.
         /// </summary>
-        public static readonly DependencyProperty MinAngleProperty =
-            DependencyProperty.Register(nameof(MinAngle), typeof(int), typeof(RadialRangeIndicator), new PropertyMetadata(0, OnScaleChanged));
+        public static readonly DependencyProperty ScaleMinimumAngleProperty =
+            DependencyProperty.Register(nameof(ScaleMinimumAngle), typeof(int), typeof(RadialRangeIndicator), new PropertyMetadata(0, OnScaleChanged));
 
         /// <summary>
-        /// Identifies the MaxAngle dependency property.
+        /// Identifies the ScaleMaximumAngle dependency property.
         /// </summary>
-        public static readonly DependencyProperty MaxAngleProperty =
-            DependencyProperty.Register(nameof(MaxAngle), typeof(int), typeof(RadialRangeIndicator), new PropertyMetadata(360, OnScaleChanged));
+        public static readonly DependencyProperty ScaleMaximumAngleProperty =
+            DependencyProperty.Register(nameof(ScaleMaximumAngle), typeof(int), typeof(RadialRangeIndicator), new PropertyMetadata(360, OnScaleChanged));
 
         /// <summary>
-        /// Identifies the MinRangeValueAngle dependency property.
+        /// Identifies the RangeMinimumValueAngle dependency property.
         /// </summary>
-        protected static readonly DependencyProperty MinRangeValueAngleProperty =
-            DependencyProperty.Register(nameof(MinRangeValueAngle), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(null));
+        protected static readonly DependencyProperty RangeMinimumValueAngleProperty =
+            DependencyProperty.Register(nameof(RangeMinimumValueAngle), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(null));
 
         /// <summary>
-        /// Identifies the MaxRangeValueAngle dependency property.
+        /// Identifies the RangeMaximumValueAngle dependency property.
         /// </summary>
-        protected static readonly DependencyProperty MaxRangeValueAngleProperty =
-            DependencyProperty.Register(nameof(MaxRangeValueAngle), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(null));
-
+        protected static readonly DependencyProperty RangeMaximumValueAngleProperty =
+            DependencyProperty.Register(nameof(RangeMaximumValueAngle), typeof(double), typeof(RadialRangeIndicator), new PropertyMetadata(null));
 
         // Template Parts.
         private const string ContainerPartName = "PART_Container";
@@ -152,10 +151,10 @@ namespace XamlBrewer.Uwp.Controls
         /// <summary>
         /// Gets or sets the rounding interval for the Value.
         /// </summary>
-        public double StepSize
+        public double RangeStepSize
         {
-            get { return (double)GetValue(StepSizeProperty); }
-            set { SetValue(StepSizeProperty, value); }
+            get { return (double)GetValue(RangeStepSizeProperty); }
+            set { SetValue(RangeStepSizeProperty, value); }
         }
 
         /// <summary>
@@ -170,37 +169,37 @@ namespace XamlBrewer.Uwp.Controls
         /// <summary>
         /// Gets or sets the minimum value of the scale.
         /// </summary>
-        public double Minimum
+        public double ScaleMinimum
         {
-            get { return (double)GetValue(MinimumProperty); }
-            set { SetValue(MinimumProperty, value); }
+            get { return (double)GetValue(ScaleMinimumProperty); }
+            set { SetValue(ScaleMinimumProperty, value); }
         }
 
         /// <summary>
         /// Gets or sets the maximum value of the scale.
         /// </summary>
-        public double Maximum
+        public double ScaleMaximum
         {
-            get { return (double)GetValue(MaximumProperty); }
-            set { SetValue(MaximumProperty, value); }
+            get { return (double)GetValue(ScaleMaximumProperty); }
+            set { SetValue(ScaleMaximumProperty, value); }
         }
 
         /// <summary>
         /// Gets or sets the minimum value for the range.
         /// </summary>
-        public double MinRangeValue
+        public double RangeMinimum
         {
-            get { return (double)GetValue(MinRangeValueProperty); }
-            set { SetValue(MinRangeValueProperty, value); }
+            get { return (double)GetValue(RangeMinimumProperty); }
+            set { SetValue(RangeMinimumProperty, value); }
         }
 
         /// <summary>
         /// Gets or sets the maximum value for the range.
         /// </summary>
-        public double MaxRangeValue
+        public double RangeMaximum
         {
-            get { return (double)GetValue(MaxRangeValueProperty); }
-            set { SetValue(MaxRangeValueProperty, value); }
+            get { return (double)GetValue(RangeMaximumProperty); }
+            set { SetValue(RangeMaximumProperty, value); }
         }
 
         /// <summary>
@@ -278,37 +277,37 @@ namespace XamlBrewer.Uwp.Controls
         /// <summary>
         /// Gets or sets the start angle of the scale, which corresponds with the Minimum value, in degrees.
         /// </summary>
-        public int MinAngle
+        public int ScaleMinimumAngle
         {
-            get { return (int)GetValue(MinAngleProperty); }
-            set { SetValue(MinAngleProperty, value); }
+            get { return (int)GetValue(ScaleMinimumAngleProperty); }
+            set { SetValue(ScaleMinimumAngleProperty, value); }
         }
 
         /// <summary>
         /// Gets or sets the end angle of the scale, which corresponds with the Maximum value, in degrees.
         /// </summary>
-        public int MaxAngle
+        public int ScaleMaximumAngle
         {
-            get { return (int)GetValue(MaxAngleProperty); }
-            set { SetValue(MaxAngleProperty, value); }
+            get { return (int)GetValue(ScaleMaximumAngleProperty); }
+            set { SetValue(ScaleMaximumAngleProperty, value); }
         }
 
         /// <summary>
         /// Gets or sets the angle for the minimum value of the range (between MinAngle and MaxAngle). 
         /// </summary>
-        protected double MinRangeValueAngle
+        protected double RangeMinimumValueAngle
         {
-            get { return (double)GetValue(MinRangeValueAngleProperty); }
-            set { SetValue(MinRangeValueAngleProperty, value); }
+            get { return (double)GetValue(RangeMinimumValueAngleProperty); }
+            set { SetValue(RangeMinimumValueAngleProperty, value); }
         }
 
         /// <summary>
         /// Gets or sets the angle for the maximum value of the range (between MinAngle and MaxAngle). 
         /// </summary>
-        protected double MaxRangeValueAngle
+        protected double RangeMaximumValueAngle
         {
-            get { return (double)GetValue(MaxRangeValueAngleProperty); }
-            set { SetValue(MaxRangeValueAngleProperty, value); }
+            get { return (double)GetValue(RangeMaximumValueAngleProperty); }
+            set { SetValue(RangeMaximumValueAngleProperty, value); }
         }
 
         /// <summary>
@@ -341,29 +340,29 @@ namespace XamlBrewer.Uwp.Controls
         private static void OnValueChanged(DependencyObject d)
         {
             var radialRangeIndicator = (RadialRangeIndicator)d;
-            if (!double.IsNaN(radialRangeIndicator.MaxRangeValue))
+            if (!double.IsNaN(radialRangeIndicator.RangeMaximum))
             {
-                if (radialRangeIndicator.StepSize > 0)
+                if (radialRangeIndicator.RangeStepSize > 0)
                 {
                     // Round values to StepSize.
-                    radialRangeIndicator.MinRangeValue = radialRangeIndicator.RoundToMultiple(radialRangeIndicator.MinRangeValue, radialRangeIndicator.StepSize);
-                    radialRangeIndicator.MaxRangeValue = radialRangeIndicator.RoundToMultiple(radialRangeIndicator.MaxRangeValue, radialRangeIndicator.StepSize);
+                    radialRangeIndicator.RangeMinimum = radialRangeIndicator.RoundToMultiple(radialRangeIndicator.RangeMinimum, radialRangeIndicator.RangeStepSize);
+                    radialRangeIndicator.RangeMaximum = radialRangeIndicator.RoundToMultiple(radialRangeIndicator.RangeMaximum, radialRangeIndicator.RangeStepSize);
                 }
 
                 var middleOfScale = Radius - (radialRangeIndicator.ScaleWidth / 2);
                 var valueText = radialRangeIndicator.GetTemplateChild(TextPartName) as TextBlock;
-                radialRangeIndicator.MinRangeValueAngle = radialRangeIndicator.ValueToAngle(radialRangeIndicator.MinRangeValue);
-                radialRangeIndicator.MaxRangeValueAngle = radialRangeIndicator.ValueToAngle(radialRangeIndicator.MaxRangeValue);
+                radialRangeIndicator.RangeMinimumValueAngle = radialRangeIndicator.ValueToAngle(radialRangeIndicator.RangeMinimum);
+                radialRangeIndicator.RangeMaximumValueAngle = radialRangeIndicator.ValueToAngle(radialRangeIndicator.RangeMaximum);
 
                 // Range
                 var range = radialRangeIndicator.GetTemplateChild(RangePartName) as Path;
                 if (range != null)
                 {
-                    if (radialRangeIndicator.MaxRangeValueAngle > radialRangeIndicator.MinRangeValueAngle)
+                    if (radialRangeIndicator.RangeMaximumValueAngle > radialRangeIndicator.RangeMinimumValueAngle)
                     {
                         range.Visibility = Visibility.Visible;
 
-                        if (radialRangeIndicator.MaxRangeValueAngle - radialRangeIndicator.NormalizedMinAngle == 360)
+                        if (radialRangeIndicator.RangeMaximumValueAngle - radialRangeIndicator.NormalizedMinAngle == 360)
                         {
                             // Draw full circle.
                             var eg = new EllipseGeometry
@@ -385,17 +384,17 @@ namespace XamlBrewer.Uwp.Controls
                             var pf = new PathFigure
                             {
                                 IsClosed = false,
-                                StartPoint = radialRangeIndicator.ScalePoint(radialRangeIndicator.MinRangeValueAngle, middleOfScale)
+                                StartPoint = radialRangeIndicator.ScalePoint(radialRangeIndicator.RangeMinimumValueAngle, middleOfScale)
                             };
 
                             var seg = new ArcSegment
                             {
                                 SweepDirection = SweepDirection.Clockwise,
-                                IsLargeArc = radialRangeIndicator.MaxRangeValueAngle > (180 + radialRangeIndicator.MinRangeValueAngle),
+                                IsLargeArc = radialRangeIndicator.RangeMaximumValueAngle > (180 + radialRangeIndicator.RangeMinimumValueAngle),
                                 Size = new Size(middleOfScale, middleOfScale),
                                 Point =
                                     radialRangeIndicator.ScalePoint(
-                                        Math.Min(radialRangeIndicator.MaxRangeValueAngle, radialRangeIndicator.NormalizedMaxAngle), middleOfScale)
+                                        Math.Min(radialRangeIndicator.RangeMaximumValueAngle, radialRangeIndicator.NormalizedMaxAngle), middleOfScale)
                             };
 
                             pf.Segments.Add(seg);
@@ -412,7 +411,7 @@ namespace XamlBrewer.Uwp.Controls
                 // Value Text
                 if (valueText != null)
                 {
-                    valueText.Text = string.Format(radialRangeIndicator.TextStringFormat, radialRangeIndicator.MinRangeValue, radialRangeIndicator.MaxRangeValue);
+                    valueText.Text = string.Format(radialRangeIndicator.TextStringFormat, radialRangeIndicator.RangeMinimum, radialRangeIndicator.RangeMaximum);
                 }
             }
         }
@@ -472,7 +471,7 @@ namespace XamlBrewer.Uwp.Controls
 
         private void UpdateNormalizedAngles()
         {
-            var result = Mod(MinAngle, 360);
+            var result = Mod(ScaleMinimumAngle, 360);
 
             if (result >= 180)
             {
@@ -481,7 +480,7 @@ namespace XamlBrewer.Uwp.Controls
 
             _normalizedMinAngle = result;
 
-            result = Mod(MaxAngle, 360);
+            result = Mod(ScaleMaximumAngle, 360);
 
             if (result < 180)
             {
@@ -504,18 +503,18 @@ namespace XamlBrewer.Uwp.Controls
         private double ValueToAngle(double value)
         {
             // Off-scale on the left.
-            if (value < Minimum)
+            if (value < ScaleMinimum)
             {
-                return MinAngle;
+                return ScaleMinimumAngle;
             }
 
             // Off-scale on the right.
-            if (value > Maximum)
+            if (value > ScaleMaximum)
             {
-                return MaxAngle;
+                return ScaleMaximumAngle;
             }
 
-            return ((value - Minimum) / (Maximum - Minimum) * (NormalizedMaxAngle - NormalizedMinAngle)) + NormalizedMinAngle;
+            return ((value - ScaleMinimum) / (ScaleMaximum - ScaleMinimum) * (NormalizedMaxAngle - NormalizedMinAngle)) + NormalizedMinAngle;
         }
 
         private double RoundToMultiple(double number, double multiple)
