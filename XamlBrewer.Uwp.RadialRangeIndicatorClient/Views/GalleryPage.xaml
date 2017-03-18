@@ -33,9 +33,9 @@
                                 Value="Flat" />
                         <Setter Property="RangeEndCap"
                                 Value="Flat" />
-                        <Setter Property="MinAngle"
+                        <Setter Property="ScaleMinimumAngle"
                                 Value="-150" />
-                        <Setter Property="MaxAngle"
+                        <Setter Property="ScaleMaximumAngle"
                                 Value="150" />
                         <Setter Property="TextBrush"
                                 Value="Transparent" />
@@ -46,13 +46,13 @@
                 <controls:RadialRangeIndicator RangeBrush="LightGreen"
                                                Margin="60" />
                 <controls:RadialRangeIndicator RangeBrush="Yellow"
-                                               MinRangeValue="60"
-                                               MaxRangeValue="80"
+                                               RangeMinimum="60"
+                                               RangeMaximum="80"
                                                Margin="60"
                                                ScaleWidth="30" />
                 <controls:RadialRangeIndicator RangeBrush="Red"
-                                               MinRangeValue="80"
-                                               MaxRangeValue="100"
+                                               RangeMinimum="80"
+                                               RangeMaximum="100"
                                                Margin="60"
                                                ScaleWidth="35" />
                 <toolkit:RadialGauge Value="45"
@@ -112,7 +112,7 @@
                                                            Foreground="{TemplateBinding TextBrush}"
                                                            FontSize="20"
                                                            FontWeight="SemiBold"
-                                                           Text="{TemplateBinding MaxRangeValue}"
+                                                           Text="{TemplateBinding RangeMaximum}"
                                                            TextAlignment="Center" />
                                             </StackPanel>
                                         </Grid>
@@ -123,8 +123,8 @@
                     </Setter>
                 </Style>
             </Grid.Resources>
-            <controls:RadialRangeIndicator MinAngle="-150"
-                                           MaxAngle="150"
+            <controls:RadialRangeIndicator ScaleMinimumAngle="-150"
+                                           ScaleMaximumAngle="150"
                                            ScaleBrush="Silver"
                                            TextStringFormat="{}{0}-{1} Å"
                                            TextBrush="{StaticResource PageForegroundBrush}" />
@@ -147,22 +147,22 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <controls:RadialRangeIndicator MinAngle="-180"
-                                           MaxAngle="90"
+            <controls:RadialRangeIndicator ScaleMinimumAngle="-180"
+                                           ScaleMaximumAngle="90"
                                            ScaleWidth="10"
-                                           MinRangeValue="0"
-                                           MaxRangeValue="25"
+                                           RangeMinimum="0"
+                                           RangeMaximum="25"
                                            RangeBrush="#B1560F"
                                            TextStringFormat="{}{1}%"
                                            TextBrush="Silver"
                                            Margin="0 0 5 5"
                                            Grid.RowSpan="2"
                                            Grid.ColumnSpan="2" />
-            <controls:RadialRangeIndicator MinAngle="-90"
-                                           MaxAngle="180"
+            <controls:RadialRangeIndicator ScaleMinimumAngle="-90"
+                                           ScaleMaximumAngle="180"
                                            ScaleWidth="10"
-                                           MinRangeValue="50"
-                                           MaxRangeValue="100"
+                                           RangeMinimum="50"
+                                           RangeMaximum="100"
                                            RangeBrush="#7A6F41"
                                            TextStringFormat="{}{0}-{1} kWh"
                                            TextBrush="Silver"
@@ -170,11 +170,11 @@
                                            Grid.Column="2"
                                            Grid.RowSpan="2"
                                            Grid.ColumnSpan="2" />
-            <controls:RadialRangeIndicator MinAngle="90"
-                                           MaxAngle="0"
+            <controls:RadialRangeIndicator ScaleMinimumAngle="90"
+                                           ScaleMaximumAngle="0"
                                            ScaleWidth="10"
-                                           MinRangeValue="25"
-                                           MaxRangeValue="75"
+                                           RangeMinimum="25"
+                                           RangeMaximum="75"
                                            RangeBrush="#7A6F41"
                                            TextStringFormat="{}{0}-{1} x 1000 RPM"
                                            TextBrush="Silver"
@@ -182,11 +182,11 @@
                                            Grid.Row="2"
                                            Grid.RowSpan="2"
                                            Grid.ColumnSpan="2" />
-            <controls:RadialRangeIndicator MinAngle="0"
-                                           MaxAngle="-90"
+            <controls:RadialRangeIndicator ScaleMinimumAngle="0"
+                                           ScaleMaximumAngle="-90"
                                            ScaleWidth="10"
-                                           MinRangeValue="0"
-                                           MaxRangeValue="25"
+                                           RangeMinimum="0"
+                                           RangeMaximum="25"
                                            RangeBrush="#B1560F"
                                            TextBrush="Silver"
                                            TextStringFormat="{}{1} °F"
@@ -195,11 +195,11 @@
                                            Grid.Column="2"
                                            Grid.RowSpan="2"
                                            Grid.ColumnSpan="2" />
-            <controls:RadialRangeIndicator MinAngle="180"
-                                           MaxAngle="180"
+            <controls:RadialRangeIndicator ScaleMinimumAngle="180"
+                                           ScaleMaximumAngle="180"
                                            ScaleWidth="10"
-                                           MinRangeValue="0"
-                                           MaxRangeValue="25"
+                                           RangeMinimum="0"
+                                           RangeMaximum="25"
                                            TextStringFormat="{}{0}-{1} Ω"
                                            TextBrush="Silver"
                                            Margin="5"

@@ -13,14 +13,14 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <controls:RadialRangeIndicator MinRangeValue="{Binding ElementName=MinRangeValueSlider, Path=Value, Mode=TwoWay}"
-                                       MaxRangeValue="{Binding ElementName=MaxRangeValueSlider, Path=Value, Mode=TwoWay}"
-                                       MinAngle="{Binding ElementName=MinAngleSlider, Path=Value, Mode=TwoWay}"
-                                       MaxAngle="{Binding ElementName=MaxAngleSlider, Path=Value, Mode=TwoWay}"
+        <controls:RadialRangeIndicator RangeMinimum="{Binding ElementName=MinRangeValueSlider, Path=Value, Mode=TwoWay}"
+                                       RangeMaximum="{Binding ElementName=MaxRangeValueSlider, Path=Value, Mode=TwoWay}"
+                                       ScaleMinimumAngle="{Binding ElementName=MinAngleSlider, Path=Value, Mode=TwoWay}"
+                                       ScaleMaximumAngle="{Binding ElementName=MaxAngleSlider, Path=Value, Mode=TwoWay}"
                                        ScaleWidth="{Binding ElementName=ScaleWidthSlider, Path=Value, Mode=TwoWay}"
                                        ScaleBrush="Silver"
                                        TextBrush="{StaticResource SplitViewForegroundBrush}"
-                                       StepSize="1"
+                                       RangeStepSize="1"
                                        Margin="40"
                                        Grid.Column="0" />
         <Grid Grid.Column="1"
@@ -45,13 +45,13 @@
                     StepFrequency=".4"
                     Grid.Row="1" />
             <Slider x:Name="MinAngleSlider"
-                    Header="Minimum Angle"
+                    Header="Minimum Scale Angle"
                     Minimum="-360"
                     Maximum="360"
                     Value="-130"
                     Grid.Row="2" />
             <Slider x:Name="MaxAngleSlider"
-                    Header="Maximum Angle"
+                    Header="Maximum Scale Angle"
                     Minimum="-360"
                     Maximum="360"
                     Value="130"

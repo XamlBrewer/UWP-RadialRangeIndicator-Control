@@ -36,7 +36,6 @@
                                                Foreground="{TemplateBinding TextBrush}"
                                                FontSize="20"
                                                FontWeight="SemiBold"
-                                               Text="{TemplateBinding MaxRangeValue}"
                                                TextAlignment="Center" />
                                 </StackPanel>
                             </Grid>
